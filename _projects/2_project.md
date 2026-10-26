@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Breathing Phantom Simulator
-description: A Pneumatically Actuated Chest Phantom for Testing Robotic Ultrasound on a Moving Body
+description: A Pneumatically Actuated Abdomen Phantom for Testing Robotic Ultrasound on a Moving Body
 img: assets/img/projects/breathing-phantom.jpg
 importance: 2
 category: work
@@ -12,9 +12,9 @@ category: work
 **Organization:** Healthcare Technology Innovation Center (HTIC), IIT Madras Research Park, Chennai<br>
 **Role:** Robotics Engineer · 2026
 
-Real patients breathe. With every breath the chest and abdomen rise and fall, so the surface a [robotic ultrasound system]({{ '/projects/1_project/' | relative_url }}) presses against is always moving. A static phantom cannot show whether the robot holds steady probe contact through that motion; testing on volunteers is slow, hard to repeat and not where an unproven controller should be tuned.
+Real patients breathe. With every breath the chest and abdomen rise and fall, so the surface a [robotic ultrasound system]({{ '/projects/1_project/' | relative_url }}) presses against is always moving. A static phantom cannot show whether the robot holds steady probe contact through that motion; testing on volunteers is not where an unproven controller should be tuned.
 
-I built a **breathing phantom simulator**: a compact, pneumatically actuated test bed whose soft surface rises and falls like a breathing chest. It gives the force-controlled robot a **repeatable, moving target** to test against before it ever touches a person.
+I built a **breathing phantom simulator**: a compact, pneumatically actuated test bed whose soft surface rises and falls like a breathing abdomen of a pregnant person. It gives the force-controlled robot a **repeatable, moving target** to test against before it ever touches a person.
 
 ## System Overview
 
@@ -45,8 +45,7 @@ The first version answered one question: can a small pump and a sealed enclosure
 
 The final version scales the idea up to something the robot can actually scan:
 
-- **Larger, softer breathing surface:** A wide membrane dome mounted in a rigid black housing gives the probe a big enough area to sweep across, closer to the size of a real chest.
-- **Positioned in the robot's workspace:** The phantom sits under the 7-DOF manipulator next to the torso phantom, so the same setup can switch between static and breathing tests.
+- **Larger, softer breathing surface:** A wide membrane dome mounted in a rigid black housing gives the probe a big enough area to sweep across, closer to the size of a real abdomen.
 - **Tested with the robot in the loop:** The robot lowers the ultrasound probe onto the moving surface and has to keep contact while the surface breathes, a direct test of the [admittance controller]({{ '/projects/1_project/' | relative_url }}).
 
 ## Why It Matters
@@ -65,9 +64,9 @@ A breathing surface turns force control from a static problem into a **disturban
 
 ## Technical Stack
 
-- **Mechanical:** Domed membrane surface, rigid housing, sealed enclosure
+- **Mechanical:** Domed membrane surface, rigid housing, soft materials
 - **Actuation:** DC motor-driven air pump, pneumatic tubing
-- **Electronics:** Microcontroller-based pump control
+- **Electronics:** Microcontroller-based pump control, pressure sensors
 - **Use:** Validation test bed for the force-controlled tele-ultrasound robot
 
 ## Video Demonstration
