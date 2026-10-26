@@ -30,13 +30,13 @@ The phantom is built from three subsystems:
 
 ### First Prototype: Proving the Concept
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/breathing-phantom-prototype.jpg" title="First prototype" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div style="max-width: 760px; margin: 1rem auto 0;">
+  <div style="position: relative; width: 100%; padding-top: 56.25%;">
+    <iframe src="https://drive.google.com/file/d/1YfyGrRKOcMTxJvPWVLearGo1Ffls4TPq/preview" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" class="rounded z-depth-1" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Breathing phantom first prototype"></iframe>
+  </div>
 </div>
 <div class="caption">
-    First prototype: a small dome on a sealed enclosure, driven by a DC air pump wired on a breadboard.
+    First prototype: the DC air pump inflates and deflates the dome on a sealed enclosure to simulate breathing.
 </div>
 
 The first version answered one question: can a small pump and a sealed enclosure produce a convincing, repeatable rise-and-fall motion? It used a small domed surface on top of a box enclosure, a DC motor-driven air pump connected by tubing, and breadboard electronics. A fiducial marker is fixed to the top of the enclosure. <!-- TODO(Dev): explain what the marker was used for (e.g. camera-based tracking of the phantom) -->
@@ -70,9 +70,7 @@ A breathing surface turns force control from a static problem into a **disturban
 - **Electronics:** Microcontroller-based pump control
 - **Use:** Validation test bed for the force-controlled tele-ultrasound robot
 
-## Video Demonstrations
-
-### Final Version with the Robot
+## Video Demonstration
 
 <div style="max-width: 760px; margin: 1rem auto 0;">
   <div style="position: relative; width: 100%; padding-top: 56.25%;">
@@ -81,15 +79,4 @@ A breathing surface turns force control from a static problem into a **disturban
 </div>
 <div class="caption">
     The 7-DOF arm brings the ultrasound probe onto the breathing surface of the final phantom.
-</div>
-
-### First Prototype
-
-<div style="max-width: 760px; margin: 1rem auto 0;">
-  <div style="position: relative; width: 100%; padding-top: 56.25%;">
-    <iframe src="https://drive.google.com/file/d/1YfyGrRKOcMTxJvPWVLearGo1Ffls4TPq/preview" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" class="rounded z-depth-1" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Breathing phantom first prototype"></iframe>
-  </div>
-</div>
-<div class="caption">
-    First prototype: the pump inflates and deflates the dome to simulate breathing.
 </div>
