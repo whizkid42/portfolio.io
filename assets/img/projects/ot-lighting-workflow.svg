@@ -1,44 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 230" font-family="Helvetica, Arial, sans-serif">
-  <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
-    </marker>
-  </defs>
-  <rect width="960" height="230" rx="14" fill="#ffffff"/>
-  <g text-anchor="middle">
-    <circle cx="96" cy="70" r="30" fill="#3b82f6"/><text x="96" y="78" font-size="22" font-weight="700" fill="#fff">1</text>
-    <text x="96" y="130" font-size="15" font-weight="700" fill="#0f172a">Clench</text>
-    <text x="96" y="152" font-size="12.5" fill="#475569">jaw-clench sensor on</text>
-    <text x="96" y="169" font-size="12.5" fill="#475569">the temple activates</text>
-    <text x="96" y="186" font-size="12.5" fill="#475569">the laser pointer</text>
-
-    <circle cx="288" cy="70" r="30" fill="#8b5cf6"/><text x="288" y="78" font-size="22" font-weight="700" fill="#fff">2</text>
-    <text x="288" y="130" font-size="15" font-weight="700" fill="#0f172a">Point</text>
-    <text x="288" y="152" font-size="12.5" fill="#475569">the laser on the glasses</text>
-    <text x="288" y="169" font-size="12.5" fill="#475569">marks the spot the</text>
-    <text x="288" y="186" font-size="12.5" fill="#475569">surgeon wants lit</text>
-
-    <circle cx="480" cy="70" r="30" fill="#eab308"/><text x="480" y="78" font-size="22" font-weight="700" fill="#fff">3</text>
-    <text x="480" y="130" font-size="15" font-weight="700" fill="#0f172a">Confirm</text>
-    <text x="480" y="152" font-size="12.5" fill="#475569">a second clench</text>
-    <text x="480" y="169" font-size="12.5" fill="#475569">confirms the target</text>
-
-    <circle cx="672" cy="70" r="30" fill="#06b6d4"/><text x="672" y="78" font-size="22" font-weight="700" fill="#fff">4</text>
-    <text x="672" y="130" font-size="15" font-weight="700" fill="#0f172a">Localize &amp; Plan</text>
-    <text x="672" y="152" font-size="12.5" fill="#475569">cameras find the dot in 3D;</text>
-    <text x="672" y="169" font-size="12.5" fill="#475569">planner picks an arm and</text>
-    <text x="672" y="186" font-size="12.5" fill="#475569">a safe trajectory</text>
-
-    <circle cx="864" cy="70" r="30" fill="#22c55e"/><text x="864" y="78" font-size="22" font-weight="700" fill="#fff">5</text>
-    <text x="864" y="130" font-size="15" font-weight="700" fill="#0f172a">Light Follows</text>
-    <text x="864" y="152" font-size="12.5" fill="#475569">the arm moves and</text>
-    <text x="864" y="169" font-size="12.5" fill="#475569">focuses the light on the</text>
-    <text x="864" y="186" font-size="12.5" fill="#475569">point, with no assistant</text>
-  </g>
-  <g stroke="#334155" stroke-width="2">
-    <line x1="132" y1="70" x2="250" y2="70" marker-end="url(#a)"/>
-    <line x1="324" y1="70" x2="442" y2="70" marker-end="url(#a)"/>
-    <line x1="516" y1="70" x2="634" y2="70" marker-end="url(#a)"/>
-    <line x1="708" y1="70" x2="826" y2="70" marker-end="url(#a)"/>
-  </g>
-</svg>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker></defs>
+<rect width="960" height="230" rx="14" fill="#ffffff"/>
+<g text-anchor="middle">
+<circle cx="96" cy="70" r="30" fill="#3b82f6"/><text x="96" y="78" font-size="22" font-weight="700" fill="#fff">1</text>
+<text x="96" y="130" font-size="15" font-weight="700" fill="#0f172a">Clench &amp; Look</text>
+<text x="96" y="152" font-size="12.5" fill="#475569">clench once and look</text>
+<text x="96" y="169" font-size="12.5" fill="#475569">at the target; the</text>
+<text x="96" y="186" font-size="12.5" fill="#475569">laser switches on</text>
+<circle cx="288" cy="70" r="30" fill="#8b5cf6"/><text x="288" y="78" font-size="22" font-weight="700" fill="#fff">2</text>
+<text x="288" y="130" font-size="15" font-weight="700" fill="#0f172a">Confirm</text>
+<text x="288" y="152" font-size="12.5" fill="#475569">clench again; camera</text>
+<text x="288" y="169" font-size="12.5" fill="#475569">captures the dot and</text>
+<text x="288" y="186" font-size="12.5" fill="#475569">an LED flashes</text>
+<circle cx="480" cy="70" r="30" fill="#eab308"/><text x="480" y="78" font-size="22" font-weight="700" fill="#fff">3</text>
+<text x="480" y="130" font-size="15" font-weight="700" fill="#0f172a">Localize &amp; Plan</text>
+<text x="480" y="152" font-size="12.5" fill="#475569">dot located in 3D;</text>
+<text x="480" y="169" font-size="12.5" fill="#475569">planner picks an arm</text>
+<text x="480" y="186" font-size="12.5" fill="#475569">and a safe path</text>
+<circle cx="672" cy="70" r="30" fill="#06b6d4"/><text x="672" y="78" font-size="22" font-weight="700" fill="#fff">4</text>
+<text x="672" y="130" font-size="15" font-weight="700" fill="#0f172a">Light Focuses</text>
+<text x="672" y="152" font-size="12.5" fill="#475569">the arm moves above</text>
+<text x="672" y="169" font-size="12.5" fill="#475569">the target and focuses,</text>
+<text x="672" y="186" font-size="12.5" fill="#475569">no assistant needed</text>
+<circle cx="864" cy="70" r="30" fill="#22c55e"/><text x="864" y="78" font-size="22" font-weight="700" fill="#fff">5</text>
+<text x="864" y="130" font-size="15" font-weight="700" fill="#0f172a">Fine-Tune</text>
+<text x="864" y="152" font-size="12.5" fill="#475569">clench-hold and tilt</text>
+<text x="864" y="169" font-size="12.5" fill="#475569">head ±15° to change</text>
+<text x="864" y="186" font-size="12.5" fill="#475569">angle; release to lock</text>
+</g><g stroke="#334155" stroke-width="2">
+<line x1="132" y1="70" x2="250" y2="70" marker-end="url(#a)"/>
+<line x1="324" y1="70" x2="442" y2="70" marker-end="url(#a)"/>
+<line x1="516" y1="70" x2="634" y2="70" marker-end="url(#a)"/>
+<line x1="708" y1="70" x2="826" y2="70" marker-end="url(#a)"/>
+</g></svg>
