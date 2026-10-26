@@ -7,9 +7,10 @@ importance: 4
 category: work
 ---
 
-**Team:** Dharini Raghavan, Raviteja Upadrashta,Prof. Bharadwaj Amrutur<br>
+**Team:** Dharini Raghavan, Raviteja Upadrashta, Dev Sakaria, Prof. Bharadwaj Amrutur<br>
 **Organization:** Robert Bosch Center for Cyber-Physical Systems (RBCCPS), Indian Institute of Science, Bengaluru<br>
 **Role:** Robotics Intern · Jan – Jun 2024<br>
+**Code:** [github.com/rdharini2001/Multi-View-Perception](https://github.com/rdharini2001/Multi-View-Perception)
 
 Indoor mobile robots usually localize with LiDAR, which struggles in sparse, feature-poor spaces, while on-board cameras only see what is directly in front of them. Most warehouses and labs already have **fixed security (CCTV) cameras** that see the whole floor. This project turns those cameras into a shared perception sensor for a fleet of **Volta autonomous mobile robots**, fusing their view with each robot's own LiDAR, IMU, wheel odometry and depth camera, with the heavy computation running on **Qualcomm RB5** processors at the edge and on board.
 
@@ -26,14 +27,16 @@ Indoor mobile robots usually localize with LiDAR, which struggles in sparse, fea
   </div>
 </div>
 
-## Key Contributions
+## My Contributions
 
-### Marker-less 6D Pose Estimation
+As a robotics intern on a four-person team, I worked mainly on the localization side of the stack: getting camera-based pose estimates into ROS, fusing them with the robots' own sensors, and proving through experiments that the fusion actually helped. The team's overall approach used a YOLOv8-pose keypoint model trained on synthetic Unity data, with PnP to recover each robot's 6D pose and an uncertainty-aware camera placement method.
+
+### Integrating Camera-Based Pose Estimation into ROS
 
 <div class="row mt-3" style="margin-left: 0; margin-right: 0;">
   <div class="col-sm mt-3 mt-md-0">
-    <p>ArUco markers fail as soon as the tag is occluded. Instead, a modified <strong>YOLOv8-pose</strong> network detects 30 hand-picked keypoints on the robot's body, and <strong>PnP + RANSAC</strong> turns the 2D–3D correspondences into a 6D pose. It stays robust even when <strong>25 of 30 keypoints are occluded</strong>.</p>
-    <p>The network was trained entirely on a <strong>25,000-image synthetic dataset</strong> rendered in Unity 3D from a CAD model of the Volta, with domain randomization, lighting variation and noise to close the sim-to-real gap. The dataset was open-sourced.</p>
+    <p>I integrated the perception modules into the robot software: running the <strong>YOLOv8-pose</strong> keypoint detector on the infrastructure camera feeds, solving <strong>PnP with RANSAC in OpenCV</strong> from the 2D–3D keypoint correspondences, and publishing each robot's <strong>6D pose with its covariance</strong> as ROS messages that the localization stack could consume.</p>
+    <p>This meant working through the practical details: camera intrinsics, transforms between each camera, the world frame and the robot frames, and filtering out bad detections before they reached the filter.</p>
   </div>
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="lazy" path="assets/img/projects/amr-keypoints.jpg" title="Keypoint detection" class="img-fluid rounded z-depth-1" %}
@@ -41,13 +44,13 @@ Indoor mobile robots usually localize with LiDAR, which struggles in sparse, fea
   </div>
 </div>
 
-### Uncertainty Estimation and Camera Placement
+### Building the Multi-Robot Localization Pipeline
 
-Removing the network's non-maximum suppression layer yields 300 pose hypotheses per frame; their spread gives a **covariance estimate** for every camera measurement, propagated over time. A **camera placement algorithm** uses this uncertainty, together with each camera's field of view on the floor grid, to cover the area with the fewest cameras while keeping pose error low and leaving no blind spots.
+I developed the **EKF-based sensor fusion** pipeline in ROS using **robot_localization**, combining infrastructure-camera poses with each robot's **IMU, wheel encoders, LiDAR and on-board depth camera**, with the fused estimate fed into **RTAB-Map** SLAM. I configured sensor covariances from datasheets and the camera's estimated uncertainty, and worked on associating camera measurements with the correct robot when several robots were in view (Kalman tracking with **Mahalanobis gating**).
 
-### Multi-Robot Tracking, Data Association and Fusion
+### Tuning, Experiments and Validation
 
-Each camera tracks robots with a Kalman filter and hands tracks over as robots move between views. Measurements are matched to robots with **Mahalanobis gating** and the **Hungarian algorithm**, then fused on each robot in an **EKF (robot_localization)** feeding **RTAB-Map** SLAM. The same cameras also provide semantic segmentation and object pose as **ROS nodes** for semantic navigation.
+I ran the localization experiments that produced the results below, comparing every sensor on its own and in combination against ground truth along repeatable test trajectories. Systematic tuning of the filter (process and measurement noise) and the pose-estimation pipeline improved localization accuracy by about **39%**. I also tested the pipeline in simulation (**Gazebo, Isaac Sim**) before running it on the real robots, recorded the navigation demos, and documented the results for reproducibility.
 
 ## Results
 
