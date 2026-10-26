@@ -7,10 +7,9 @@ importance: 4
 category: work
 ---
 
-**Team:** Dharini Raghavan, Raviteja Upadrashta, Dev Sakaria, Prof. Bharadwaj Amrutur<br>
+**Team:** Dharini Raghavan, Raviteja Upadrashta,Prof. Bharadwaj Amrutur<br>
 **Organization:** Robert Bosch Center for Cyber-Physical Systems (RBCCPS), Indian Institute of Science, Bengaluru<br>
 **Role:** Robotics Intern · Jan – Jun 2024<br>
-**Code:** [github.com/rdharini2001/Multi-View-Perception](https://github.com/rdharini2001/Multi-View-Perception)
 
 Indoor mobile robots usually localize with LiDAR, which struggles in sparse, feature-poor spaces, while on-board cameras only see what is directly in front of them. Most warehouses and labs already have **fixed security (CCTV) cameras** that see the whole floor. This project turns those cameras into a shared perception sensor for a fleet of **Volta autonomous mobile robots**, fusing their view with each robot's own LiDAR, IMU, wheel odometry and depth camera, with the heavy computation running on **Qualcomm RB5** processors at the edge and on board.
 
