@@ -7,8 +7,6 @@ importance: 4
 category: work
 ---
 
-<style>article .row { margin-left: 0; margin-right: 0; }</style>
-
 **Team:** Dharini Raghavan, Raviteja Upadrashta, Dev Sakaria, Prof. Bharadwaj Amrutur<br>
 **Organization:** Robert Bosch Center for Cyber-Physical Systems (RBCCPS), Indian Institute of Science, Bengaluru<br>
 **Role:** Robotics Intern · Jan – Jun 2024<br>
@@ -18,7 +16,7 @@ Indoor mobile robots usually localize with LiDAR, which struggles in sparse, fea
 
 ## System Overview
 
-<div class="row mt-3">
+<div class="row mt-3" style="margin-left: 0; margin-right: 0;">
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="lazy" path="assets/img/projects/amr-volta.jpg" title="Volta AMR" class="img-fluid rounded" %}
     <div class="caption">The Volta autonomous mobile robot.</div>
@@ -33,7 +31,7 @@ Indoor mobile robots usually localize with LiDAR, which struggles in sparse, fea
 
 ### Marker-less 6D Pose Estimation
 
-<div class="row mt-3">
+<div class="row mt-3" style="margin-left: 0; margin-right: 0;">
   <div class="col-sm mt-3 mt-md-0">
     <p>ArUco markers fail as soon as the tag is occluded. Instead, a modified <strong>YOLOv8-pose</strong> network detects 30 hand-picked keypoints on the robot's body, and <strong>PnP + RANSAC</strong> turns the 2D–3D correspondences into a 6D pose. It stays robust even when <strong>25 of 30 keypoints are occluded</strong>.</p>
     <p>The network was trained entirely on a <strong>25,000-image synthetic dataset</strong> rendered in Unity 3D from a CAD model of the Volta, with domain randomization, lighting variation and noise to close the sim-to-real gap. The dataset was open-sourced.</p>
@@ -74,7 +72,7 @@ Each camera tracks robots with a Kalman filter and hands tracks over as robots m
 | Infrastructure camera only | 0.932 | 0.863 | 1.301 |
 | **I + W + L + VO + In** | **0.712** | **0.812** | **0.692** |
 
-<div class="row mt-3">
+<div class="row mt-3" style="margin-left: 0; margin-right: 0;">
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="lazy" path="assets/img/projects/amr-trajectory.png" title="Trajectory tracking" class="img-fluid rounded z-depth-1" %}
   </div>
@@ -92,7 +90,7 @@ Overall, marker-less pose estimation improves localization by **39.9%** over the
 
 Obstacles on the floor are hidden from the robot's on-board camera but visible to the infrastructure cameras.
 
-<div class="row mt-3">
+<div class="row mt-3" style="margin-left: 0; margin-right: 0;">
   <div class="col-sm mt-3 mt-md-0">
     <video src="{{ '/assets/video/amr-nav-without-fusion.mp4' | relative_url }}" class="img-fluid rounded z-depth-1" controls muted playsinline preload="metadata"></video>
     <div class="caption">Without camera fusion: the robot hits the small obstacles.</div>
