@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://whizkid42.github.io/sitemap.xml
