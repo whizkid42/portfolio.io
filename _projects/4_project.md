@@ -7,6 +7,8 @@ importance: 4
 category: work
 ---
 
+<style>article .row { margin-left: 0; margin-right: 0; }</style>
+
 **Team:** Dharini Raghavan, Raviteja Upadrashta, Dev Sakaria, Prof. Bharadwaj Amrutur<br>
 **Organization:** Robert Bosch Center for Cyber-Physical Systems (RBCCPS), Indian Institute of Science, Bengaluru<br>
 **Role:** Robotics Intern · Jan – Jun 2024<br>
