@@ -17,11 +17,11 @@ Indoor mobile robots usually localize with LiDAR, which struggles in sparse, fea
 ## System Overview
 
 <div class="row mt-3">
-  <div class="col-sm-5">
+  <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="lazy" path="assets/img/projects/amr-volta.jpg" title="Volta AMR" class="img-fluid rounded" %}
     <div class="caption">The Volta autonomous mobile robot.</div>
   </div>
-  <div class="col-sm-7">
+  <div class="col-sm mt-3 mt-md-0">
     <p>Infrastructure cameras, placed by a coverage-and-accuracy optimizer, stream to an <strong>RB5 edge server</strong> that estimates each robot's <strong>6D pose and uncertainty</strong>, tracks every robot with a Kalman filter, and associates measurements with the right robot.</p>
     <p>Over a WiFi 6 / 5G link, the associated measurements reach an <strong>RB5 on each robot</strong>, which fuses them with on-board sensors in an EKF and runs SLAM, giving better localization, mapping and obstacle awareness.</p>
   </div>
@@ -32,11 +32,11 @@ Indoor mobile robots usually localize with LiDAR, which struggles in sparse, fea
 ### Marker-less 6D Pose Estimation
 
 <div class="row mt-3">
-  <div class="col-sm-7">
+  <div class="col-sm mt-3 mt-md-0">
     <p>ArUco markers fail as soon as the tag is occluded. Instead, a modified <strong>YOLOv8-pose</strong> network detects 30 hand-picked keypoints on the robot's body, and <strong>PnP + RANSAC</strong> turns the 2D–3D correspondences into a 6D pose. It stays robust even when <strong>25 of 30 keypoints are occluded</strong>.</p>
     <p>The network was trained entirely on a <strong>25,000-image synthetic dataset</strong> rendered in Unity 3D from a CAD model of the Volta, with domain randomization, lighting variation and noise to close the sim-to-real gap. The dataset was open-sourced.</p>
   </div>
-  <div class="col-sm-5">
+  <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="lazy" path="assets/img/projects/amr-keypoints.jpg" title="Keypoint detection" class="img-fluid rounded z-depth-1" %}
     <div class="caption">Keypoint detection on the Volta.</div>
   </div>
