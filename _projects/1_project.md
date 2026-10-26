@@ -76,7 +76,7 @@ The system was tested on an anthropomorphic torso phantom (shown in the video be
 
 - **Control:** Admittance control, impedance-based haptic rendering, real-time control loops, system dynamics modeling
 - **Hardware:** 7-DOF robotic manipulator, ultrasound probe, grounded haptic master device, force sensing at the probe
-- **Validation:** Anthropomorphic torso phantom, breathing phantom simulator
+- **Software:** C++, Python, ROS 2
 <!-- TODO(Dev): add software (e.g. C++, Python, ROS 2) and the robot / haptic device models if you can name them -->
 
 ## Video Demonstration
