@@ -19,11 +19,11 @@ A teleoperated, robot-assisted ultrasound system that lets a sonographer scan a 
 - **Dynamics modeling and controller tuning** for stability and reliable human–robot interaction in a clinical setting.
 - **Testing on phantoms**, including the [breathing phantom]({{ '/projects/2_project/' | relative_url }}) I built for this.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/ultrasound.jpg" title="Tele-ultrasound robot" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div style="max-width: 420px; margin: 1.5rem auto 0;">
+  <div style="position: relative; width: 100%; padding-top: 177.78%;">
+    <iframe src="https://drive.google.com/file/d/1CKYvC6o1VgbYKikvikO2uMMoFu3pPbBj/preview" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" class="rounded z-depth-1" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Tele-ultrasound robot demo"></iframe>
+  </div>
 </div>
 <div class="caption">
-    The tele-ultrasound setup.
+    Teleoperation demo: the operator drives the haptic master device (bottom) and the 7-DOF arm moves the ultrasound probe over the patient phantom while holding steady contact force.
 </div>
