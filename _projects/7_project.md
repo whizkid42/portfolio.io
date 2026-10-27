@@ -65,6 +65,15 @@ Forming sealed internal chambers in cast silicone is usually the hard part. Our 
   <div class="caption">Best Design Process Award, BIOE 498/598 Soft Robotics.</div>
 </div>
 
+## My Contributions
+
+I was involved in every stage of the project, working closely with my two teammates:
+
+- **Research and brainstorming:** studied post-operative toe-alignment care and existing toe separators, and helped define the problem and the functional requirements (adjustable support, comfort while walking, durability, ease of fabrication).
+- **Design:** iterated on the separator geometry over three versions and designed the 3D-printed casting and sugar-insert moulds, including the choice of a Dragon Skin / Ecoflex layer stack.
+- **Fabrication:** made the sugar inserts, cast and cured the silicone layers, dissolved the inserts to form the chambers, and assembled the pump, valve and inlet ports.
+- **Testing and reporting:** ran the inflation and on-foot alignment tests, refined the surface finish, and co-wrote the final report and presentation.
+
 ## Next Steps
 
 Add **pressure and force sensing** with a **microcontroller-regulated mini pump**, so the separator automatically holds the inflation level a clinician prescribes or adjusts for comfort.
