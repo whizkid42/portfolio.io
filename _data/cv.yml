@@ -1,13 +1,19 @@
 cv:
   name: Dev Sanjay Sakaria
-  label: Robotics and Product Development Engineer
+  label: Robotics & Electromechanical Systems Engineer · Medical Devices
   email: devsanjaysakaria@gmail.com
-  location: Bengaluru, India
+  website: https://whizkid42.github.io
+  address:
+    city: Bengaluru
+    region: Karnataka, India
   image: ""
   summary: >-
-    Robotics and product development engineer with hands-on experience designing and validating electromechanical systems for
-    surgical and medical applications. Strong background in force-controlled robotics, system architecture and human–robot
-    interaction, including teleoperation and haptic interfaces.
+    Robotics engineer focused on **medical devices and surgical robotics**, with hands-on experience taking electromechanical
+    systems from concept to tested prototype. At IIT Madras Research Park I developed the force-control and haptic
+    teleoperation stack for a 7-DOF robot-assisted ultrasound system and built the test phantoms used to validate it. My
+    background spans control (admittance/impedance, haptics), mechanical design and fabrication, sensing and perception,
+    and system architecture with risk analysis for regulated devices. Based in Bengaluru and looking for R&D roles in
+    medtech and surgical robotics.
 
   social_networks:
     - network: LinkedIn
@@ -16,6 +22,47 @@ cv:
       username: whizkid42
 
   sections:
+    Experience:
+      - company: Healthcare Technology Innovation Centre (HTIC), IIT Madras Research Park
+        position: Robotics Engineer, Robot-Assisted Tele-Ultrasound
+        location: Chennai, India
+        start_date: 2026-01
+        end_date: 2026-09
+        highlights:
+          - Developed an **admittance-based force control framework** for a 7-DOF manipulator, giving compliant, stable probe–tissue contact for robot-assisted ultrasonography.
+          - Designed and implemented a **real-time external control layer** on top of the robot's internal controller, improving force tracking and responsiveness for scanning tasks.
+          - Architected and prototyped a **grounded haptic master interface** with impedance-based force feedback for intuitive, safe teleoperation.
+          - Modelled system dynamics and tuned controller parameters for stability and safe human–robot interaction in a clinical setting.
+          - Designed and built a **pneumatically actuated breathing phantom**, taking it from a first prototype to a robot-ready test bed that reproduces respiratory motion for validating contact control on a moving body.
+
+      - company: Hourglass Medical (M.Eng Capstone, University of Illinois)
+        position: Robotics Systems Design Intern
+        location: Champaign, IL, USA
+        start_date: 2025-05
+        end_date: 2025-08
+        highlights:
+          - Led the **system architecture** of a hands-free robotic surgical lighting system, controlled by smart glasses with a jaw-clench sensor and laser pointer, using **MBSE in SysML** (block definition and internal block diagrams) and the V-model.
+          - Defined the six subsystems and their interfaces (glasses, perception, lighting planner, control, light arms, safety), including laser-spot 3D localization, IK-based obstacle-aware motion planning and CAN-based actuation over ROS 2.
+          - Performed a high-level **FMEA** and designed the safety system (emergency stop, no-go zones, IR proximity sensing, manual override).
+
+      - company: Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science (IISc)
+        position: Robotics Intern, Multi-Robot Localization
+        location: Bengaluru, India
+        start_date: 2024-01
+        end_date: 2024-06
+        highlights:
+          - Built multi-robot localization pipelines in ROS that fuse fixed infrastructure-camera poses with on-board LiDAR, IMU, wheel odometry and depth camera in an **EKF**, feeding RTAB-Map SLAM.
+          - Integrated keypoint-based (YOLOv8-pose + PnP) **6D pose estimation** with uncertainty into the localization stack.
+          - Improved localization accuracy by about **39%** through systematic tuning and validation in Gazebo, Isaac Sim and on the Volta AMR fleet.
+
+      - company: Sansera Engineering
+        position: Automation Intern
+        location: Bengaluru, India
+        start_date: 2022-12
+        end_date: 2023-02
+        highlights:
+          - Designed an automated bearing-assembly station, developed its PLC logic and HMI, and integrated an inline vision-inspection system.
+
     Education:
       - institution: University of Illinois Urbana-Champaign, Grainger College of Engineering
         location: Urbana-Champaign, IL, USA
@@ -26,7 +73,7 @@ cv:
         end_date: 2025-12
         score: "GPA: 3.71/4.00"
         highlights:
-          - "Coursework: Autonomous Vehicle Systems Engineering, Principles of Safe Autonomy, Robotics, Applied Machine Learning, Soft Robotics, Surgical Technologies"
+          - "Coursework: Surgical Technologies, Soft Robotics, Whole Body Musculoskeletal Biomechanics, Robotics, Principles of Safe Autonomy, Autonomous Vehicle System Engineering, Applied Machine Learning"
 
       - institution: Manipal Institute of Technology
         location: Manipal, India
@@ -35,70 +82,54 @@ cv:
         studyType: B.Tech.
         start_date: 2020-06
         end_date: 2024-07
-        score: "GPA: 3.42/4.00"
         highlights:
-          - "Coursework: Mechanical Design, Controls, DSP, AI, Hydraulics, Pneumatics"
+          - "Coursework: Mechanical Design, Control Systems, Hydraulics & Pneumatics, Digital Signal Processing, Artificial Intelligence"
 
-    Experience:
-      - company: Healthcare Technology Innovation Center, IITM Research Park
-        position: Robotics Engineer
-        location: Chennai, India
-        start_date: 2026-01
-        end_date: 2026-09
+    Projects:
+      - name: Soft Robotic Toe Separator · Best Design Process Award
+        url: https://whizkid42.github.io/projects/7_project/
+        date: 2024-12
+        summary: Pneumatically actuated silicone (Dragon Skin / Ecoflex) PneuNet toe separator for post-operative bunion recovery, with air chambers formed by a dissolvable sugar-insert casting method.
         highlights:
-          - Developed an admittance-based force control framework for a 7-DOF robotic manipulator, enabling compliant interaction and stable probe–tissue contact for robot-assisted ultrasonography.
-          - Designed and implemented a real-time external control layer that augments the robot's internal controller, improving force tracking, responsiveness and task-specific performance.
-          - Architected and prototyped a grounded haptic master interface with impedance-based feedback for intuitive, safe teleoperation.
-          - Modeled system dynamics and tuned control parameters for stability, safety and reliable human–robot interaction in a clinical environment.
+          - Took part in every stage, from research and requirements through mould design, multi-material casting, pneumatic assembly and on-foot testing.
 
-      - company: Hourglass Medical
-        position: Robotics Systems Design Intern
-        location: Champaign, IL, USA
-        start_date: 2025-05
-        end_date: 2025-08
-        highlights:
-          - Led system architecture design of a multi-DOF robotic surgical lighting platform using MBSE (SysML), defining kinematics, perception, control and actuation interfaces.
-          - Implemented ROS 2 perception and planning nodes, integrating real-time CAN bus communication with sensors and actuators.
-          - Modeled and optimized multi-DOF robot kinematics to improve positioning accuracy under real-world constraints.
+      - name: Biomechanics of Taekwondo Punches
+        url: https://whizkid42.github.io/projects/8_project/
+        date: 2025-05
+        summary: Motion capture and force-plate study of dominant vs non-dominant punches, with OpenSim inverse kinematics and inverse dynamics of the hip, knee and ankle.
 
-      - company: Robert Bosch Center for Cyber-Physical Systems, IISc
-        position: Robotics Intern
-        location: Bengaluru, India
-        start_date: 2024-01
-        end_date: 2024-06
-        highlights:
-          - Developed multi-robot localization pipelines using ROS, EKF-based sensor fusion and vision-based estimation.
-          - Integrated perception modules (YOLO, OpenCV, PnP) for robust 6D pose estimation.
-          - Improved localization accuracy by 39% through systematic tuning and validation.
-          - Validated performance in simulation (Gazebo, Isaac Sim) and documented results for reproducibility.
+      - name: LiDAR–Camera Calibration & GPS-Free Localization
+        url: https://whizkid42.github.io/projects/5_project/
+        date: 2025-05
+        summary: Calibration pipeline (93.8% IoU alignment) and ICP map-based localization for a full-size autonomous vehicle; designed the first version of the estimator.
 
-      - company: Sansera Engineering
-        position: Automation Intern
-        location: Bengaluru, India
-        start_date: 2022-12
-        end_date: 2023-02
-        highlights:
-          - Designed and modeled an automated bearing assembly system, supporting fabrication and assembly.
-          - Developed PLC control logic and HMI interfaces to improve operator efficiency and reduce cycle time.
-          - Integrated and debugged industrial vision systems for reliable inline inspection.
+      - name: Lane Following & Sign Detection
+        url: https://whizkid42.github.io/projects/6_project/
+        date: 2024-12
+        summary: Camera-based lane detection and Pure Pursuit control in ROS on the GEM e4 vehicle, with YOLO STOP/SLOW sign detection.
 
     Skills:
-      - name: Robotics & Controls
+      - name: Control & Robotics
         icon: fa-solid fa-robot
-        keywords: "Haptics, teleoperation, force/impedance control, kinematics, ROS/ROS 2, EKF"
-      - name: Programming & Simulation
-        icon: fa-solid fa-code
-        keywords: "Python, C++, MATLAB/Simulink, Gazebo, Isaac Sim"
-      - name: Hardware & Design
+        keywords: "Admittance / impedance control, haptic teleoperation, force control, kinematics & dynamics modelling, controller tuning, ROS / ROS 2"
+      - name: Medical Device Development
+        icon: fa-solid fa-heart-pulse
+        keywords: "System architecture (MBSE, SysML), FMEA and ISO 14971 risk management, tissue phantoms and test fixtures, biomechanics (OpenSim, motion capture, force plates)"
+      - name: Mechanical Design & Prototyping
         icon: fa-solid fa-gears
-        keywords: "SolidWorks, sensors and actuators, CAN, PLC"
-      - name: Perception
+        keywords: "SolidWorks, 3D printing, silicone moulding and casting, pneumatic actuation, soft robotics"
+      - name: Electronics & Embedded
+        icon: fa-solid fa-microchip
+        keywords: "Sensors and actuators, CAN bus, microcontrollers, PLC / HMI"
+      - name: Perception & Estimation
         icon: fa-solid fa-eye
-        keywords: "OpenCV, YOLO, 6D pose estimation"
+        keywords: "OpenCV, YOLO, PnP pose estimation, EKF sensor fusion, LiDAR–camera calibration"
+      - name: Software & Simulation
+        icon: fa-solid fa-code
+        keywords: "Python, C++, MATLAB / Simulink, Gazebo, Isaac Sim, MuJoCo"
 
-    Certifications:
-      - title: "ISO 14971:2019 – Medical Device Risk Management"
-        authors:
-          - "Udemy"
-        date: 2024-01-01
-        awarder: Udemy
+    Awards:
+      - title: Best Design Process Award
+        awarder: BIOE 498/598 Soft Robotics, University of Illinois Urbana-Champaign
+        date: 2024-12-01
+        summary: Awarded for the soft robotic toe separator project.
