@@ -49,9 +49,6 @@ where $$\tilde{x}$$ is the deviation from the commanded probe pose, $$F_{ext}$$ 
 
 The robot's built-in controller is general-purpose and not tuned for sustained contact with soft, moving tissue. I designed and implemented a **real-time external control layer** that runs on top of it and augments the internal controller for this task, improving **force tracking, responsiveness and task-specific performance**.
 
-### Grounded Haptic Master with Impedance Feedback
-
-I architected and prototyped the **grounded haptic master interface**. It works as an impedance device: the operator's motion goes in, and a force comes out. Contact forces measured at the probe are rendered at the stylus, so the sonographer can feel how hard they are pressing and when the probe touches or leaves the skin, making teleoperation **intuitive and safe**.
 
 ### Dynamics Modeling & Stability Tuning
 
