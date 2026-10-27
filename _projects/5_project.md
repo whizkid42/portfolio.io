@@ -9,7 +9,7 @@ category: work
 
 **Course:** CS 588 Autonomous Vehicle System Engineering, University of Illinois Urbana-Champaign · Spring 2025<br>
 **Team:** Michal Juscinski (lead), Renjie Sun, Dev Sakaria<br>
-**Platform:** GEM e2 autonomous electric vehicle (GEMstack)
+**Platform:** GEM autonomous electric research vehicle (GEMstack)
 
 The class builds one shared autonomy stack for a full-size electric research vehicle, with each team owning one part. Our team owned **sensor calibration and state estimation**. We had two goals: give the perception teams accurate LiDAR–camera calibrations, and let the car **localize without GPS**, for example inside the Highbay garage where there is no satellite signal.
 
@@ -59,4 +59,4 @@ Using a geotagged LiDAR map of the garage and parking lot (built with the Automa
 - **Calibration:** Camera intrinsics, Perspective-n-Point, LiDAR-to-camera extrinsics, IoU / Hausdorff evaluation, OpenCV
 - **Localization:** LiDAR mapping, Iterative Closest Point, GNSS (Septentrio), coordinate conversion to a local metric frame
 - **Software:** Python, ROS, GEMstack
-- **Vehicle:** GEM e2 with LiDAR, corner and OAK cameras, GNSS
+- **Vehicle:** GEM research vehicle with LiDAR, corner and OAK cameras, GNSS
