@@ -60,6 +60,15 @@ Forming sealed internal chambers in cast silicone is usually the hard part. Our 
 - **Functional tests:** worn on the foot, the inflated separator **moved the big toe outward into alignment**, and support was tested in simulated walking.
 - The results confirmed our hypothesis: sugar inserts are a **fast, simple way to make well-formed, durable air chambers** for soft medical devices.
 
+<div style="max-width: 760px; margin: 1.5rem auto 0;">
+  <div style="position: relative; width: 100%; padding-top: 56.25%;">
+    <iframe src="https://drive.google.com/file/d/1pVJvg2oyEolwEbUnSmKZAOFx9rBdLX_X/preview" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" class="rounded z-depth-1" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Toe separator actuation"></iframe>
+  </div>
+</div>
+<div class="caption">
+    Final prototype on the foot: inflating the air chambers pushes the toes apart.
+</div>
+
 <div style="max-width: 560px; margin: 1.5rem auto 0;">
   {% include figure.liquid loading="lazy" path="assets/img/projects/toe-separator-award.jpg" title="Best Design Process Award" class="img-fluid rounded z-depth-1" %}
   <div class="caption">Best Design Process Award, BIOE 498/598 Soft Robotics.</div>
