@@ -28,28 +28,21 @@ Indoor mobile robots usually localize with LiDAR, which struggles in sparse, fea
 
 ## My Contributions
 
-As a robotics intern on a four-person team, I worked mainly on the localization side of the stack: getting camera-based pose estimates into ROS, fusing them with the robots' own sensors, and proving through experiments that the fusion actually helped. The team's overall approach used a YOLOv8-pose keypoint model trained on synthetic Unity data, with PnP to recover each robot's 6D pose and an uncertainty-aware camera placement method.
-
-### Integrating Camera-Based Pose Estimation into ROS
-
 <div class="row mt-3" style="margin-left: 0; margin-right: 0;">
   <div class="col-sm mt-3 mt-md-0">
-    <p>I integrated the perception modules into the robot software: running the <strong>YOLOv8-pose</strong> keypoint detector on the infrastructure camera feeds, solving <strong>PnP with RANSAC in OpenCV</strong> from the 2D–3D keypoint correspondences, and publishing each robot's <strong>6D pose with its covariance</strong> as ROS messages that the localization stack could consume.</p>
-    <p>This meant working through the practical details: camera intrinsics, transforms between each camera, the world frame and the robot frames, and filtering out bad detections before they reached the filter.</p>
+    <p>As a robotics intern on a four-person team, I worked on the localization side of the stack: getting camera-based pose estimates into ROS, fusing them with the robots' own sensors, and proving through experiments that the fusion helped.</p>
+    <ul>
+      <li><strong>ROS integration:</strong> ran YOLOv8-pose and PnP + RANSAC on the camera feeds and published each robot's 6D pose with covariance as ROS messages.</li>
+      <li><strong>Localization pipeline:</strong> built EKF fusion (robot_localization) of camera poses with IMU, wheel odometry, LiDAR and depth camera, feeding RTAB-Map SLAM.</li>
+      <li><strong>Tuning:</strong> tuned filter noise and sensor covariances, improving localization accuracy by about <strong>39%</strong>.</li>
+      <li><strong>Experiments and validation:</strong> tested in Gazebo and Isaac Sim, then on the robots against ground truth, and documented the results.</li>
+    </ul>
   </div>
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="lazy" path="assets/img/projects/amr-keypoints.jpg" title="Keypoint detection" class="img-fluid rounded z-depth-1" %}
     <div class="caption">Keypoint detection on the Volta.</div>
   </div>
 </div>
-
-### Building the Multi-Robot Localization Pipeline
-
-I developed the **EKF-based sensor fusion** pipeline in ROS using **robot_localization**, combining infrastructure-camera poses with each robot's **IMU, wheel encoders, LiDAR and on-board depth camera**, with the fused estimate fed into **RTAB-Map** SLAM. I configured sensor covariances from datasheets and the camera's estimated uncertainty, and worked on associating camera measurements with the correct robot when several robots were in view (Kalman tracking with **Mahalanobis gating**).
-
-### Tuning, Experiments and Validation
-
-I ran the localization experiments that produced the results below, comparing every sensor on its own and in combination against ground truth along repeatable test trajectories. Systematic tuning of the filter (process and measurement noise) and the pose-estimation pipeline improved localization accuracy by about **39%**. I also tested the pipeline in simulation (**Gazebo, Isaac Sim**) before running it on the real robots, recorded the navigation demos, and documented the results for reproducibility.
 
 ## Results
 

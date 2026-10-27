@@ -38,17 +38,11 @@ The **ZED2 camera** image is processed by two parallel pipelines. **Lane detecti
     Binary image after colour and gradient filtering (left), and the polynomial lane fit in the bird's-eye view (right).
 </div>
 
-Each frame goes through **HLS colour filtering** and **gradient filtering** to produce a binary image of the lane markings. A **perspective transform** then creates a bird's-eye view, and a second-order polynomial is fitted to each lane line. From the fit, the radius of curvature is computed at the bottom of the image:
-
-$$
-R = \frac{\left(1 + (2Ay + B)^2\right)^{3/2}}{\lvert 2A \rvert}
-$$
-
-where $$A$$ and $$B$$ are the polynomial coefficients. The sign of the curve gives its direction (left or right).
+Each frame goes through **HLS colour filtering** and **gradient filtering** to produce a binary image of the lane markings. A **perspective transform** then creates a bird's-eye view, and a second-order polynomial is fitted to each lane line. The fit gives the lane's **curvature** and whether the road curves **left or right**.
 
 ## Control and Sign Detection
 
-- **Pure Pursuit steering:** the controller picks a look-ahead point on the detected lane and commands a steering angle of $$\delta = \arctan(L/R)$$, where $$L$$ is the wheelbase and $$R$$ the turning radius to that point.
+- **Pure Pursuit steering:** the controller picks a look-ahead point on the detected lane and steers the vehicle towards it, giving smooth tracking around curves.
 - **YOLO sign detection:** a real-time **YOLO** single-stage detector recognizes STOP and SLOW signs (including flagger signs) in the camera feed, so the controller can stop or slow the vehicle.
 
 ## Outcome
