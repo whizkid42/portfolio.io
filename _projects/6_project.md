@@ -55,6 +55,15 @@ where $$A$$ and $$B$$ are the polynomial coefficients. The sign of the curve giv
 
 Lane detection with curvature estimation and YOLO sign detection were completed and tested on recorded and live data from the car. Tuning of the controller and full integration on the GEM e4 were still in progress at the end of the semester.
 
+## My Contributions
+
+I worked mainly on the **lane detection pipeline** and its integration in ROS, and shared vehicle testing with the team.
+
+- **Lane detection:** built the OpenCV pipeline. That meant tuning the HLS colour and gradient thresholds so the white and yellow lines stayed visible under Highbay lighting and outdoor glare, then calibrating the perspective transform for the bird's-eye view and implementing the sliding-window polynomial lane fit.
+- **Curvature and direction estimation:** implemented the radius-of-curvature calculation and left/right curve detection, and published both as ROS topics (`lane_detection/curvature`, `lane_detection/curve_direction`) for the controller.
+- **ROS integration and debugging:** subscribed to the ZED2 image stream, visualized the lane fit and detections in RViz, and debugged the pipeline on recorded rosbags before running it on the car.
+- **Testing on the GEM e4:** took part in on-vehicle test sessions, re-tuning thresholds as lighting changed and checking the controller's steering against the detected lane.
+
 ## Videos
 
 <div class="row mt-3" style="margin-left: 0; margin-right: 0;">
