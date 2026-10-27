@@ -88,4 +88,4 @@ Martial arts training usually favours the dominant side, but how differently doe
 
 - **Motion capture and force plates:** marker-based motion capture, ground reaction force measurement
 - **Musculoskeletal modelling:** OpenSim (scaling, inverse kinematics, inverse dynamics)
-- **Analysis:** MATLAB / Python, gait-cycle normalization, paired t-tests
+- **Analysis:** Python, gait-cycle normalization, paired t-tests
