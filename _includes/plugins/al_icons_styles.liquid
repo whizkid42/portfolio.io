@@ -1,0 +1,22 @@
+{% comment %}
+Local override of the al_icons styles include (keeps the original tag),
+used to add site-wide text justification.
+{% endcomment %}
+{% al_icons_styles %}
+<style>
+  article p,
+  article li,
+  .post-description,
+  .cv p,
+  .cv li,
+  .cv .card-text {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  article .caption,
+  article .caption p {
+    text-align: center;
+  }
+</style>
