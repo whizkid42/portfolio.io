@@ -6,7 +6,7 @@ nav: true
 nav_order: 5
 cv_pdf: /assets/pdf/Dev_Sakaria_CV.pdf # you can also use external links here
 cv_format: rendercv # options: rendercv, jsonresume
-description: Robotics engineer working on medical robotics, controls and mechatronics.
+description: Medical devices · surgical robotics · electromechanical R&D. Based in Bengaluru. Download the PDF with the icon on the right.
 toc:
   sidebar: left
 ---
