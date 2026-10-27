@@ -1,81 +1,76 @@
 ---
 layout: page
-title: project 7
-description: with background image
-img: assets/img/4.jpg
-importance: 1
+title: Soft Robotic Toe Separator
+description: A Pneumatically Actuated Silicone Toe Separator with Air Chambers Formed by Dissolvable Sugar Inserts · BIOE 598, UIUC
+img: assets/img/projects/toe-separator.jpg
+importance: 7
 category: work
-related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Course:** BIOE 498/598 Soft Robotics, University of Illinois Urbana-Champaign · Fall 2024<br>
+**Team:** Nidish Koppula, Dev Sakaria, David Wilcoski<br>
+**Award:** 🏆 **Best Design Process Award**, BIOE 498/598 Soft Robotics
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+After bunion or toe-fracture surgery, the big toe has to be held in the right position while it heals. Standard toe spacers are passive, one-size foam or gel blocks: they can't be adjusted as healing progresses, and they're often uncomfortable when walking. We designed a **soft, inflatable toe separator** whose silicone air chambers can be pumped up or let down, so the support can be **tuned to each patient** and adjusted over the course of recovery.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Design
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row mt-3" style="margin-left: 0; margin-right: 0;">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="lazy" path="assets/img/projects/toe-separator-chambers.jpg" title="Cast silicone separator" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="lazy" path="assets/img/projects/toe-separator-mold.jpg" title="3D-printed casting mold" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="caption">
+    The cast silicone separator (left) and the 3D-printed mold, shaped to sit between the toes (right).
+</div>
 
-{% endraw %}
+The separator is a three-layer **PneuNet** actuator:
+
+- **Top and bottom layers in Dragon Skin 30:** a stiffer silicone that stops the chambers ballooning vertically and holds the pump connector in place.
+- **Middle actuating layer in Ecoflex 00-30:** a very soft silicone containing the air chambers, which expand sideways to push the big toe back into alignment.
+
+The angled geometry fits comfortably between the toes, and the chambers run along the length of the device so pressure is spread evenly over the contact area. The shape went through **three design iterations**.
+
+## Fabrication: Sugar as a Dissolvable Core
+
+<div class="row mt-3" style="margin-left: 0; margin-right: 0;">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="lazy" path="assets/img/projects/toe-separator-inserts.jpg" title="Sugar inserts in the mold" class="img-fluid rounded z-depth-1" %}
+    <div class="caption">Sugar inserts placed in the mold.</div>
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="lazy" path="assets/img/projects/toe-separator.jpg" title="Dissolving the sugar inserts" class="img-fluid rounded z-depth-1" %}
+    <div class="caption">Injecting water to dissolve the sugar and open up the air chambers.</div>
+  </div>
+</div>
+
+Forming sealed internal chambers in cast silicone is usually the hard part. Our key idea was to use **dissolvable sugar inserts** as the chamber cores. Sugar dissolves in minutes, unlike PVA, which takes hours in heated water and needs a large outlet port. A small port is much easier to make airtight.
+
+1. **Sugar inserts:** granulated sugar mixed with a little water, packed into 3D-printed moulds and dried for at least 6 hours.
+2. **Layered casting:** pour the Dragon Skin 30 base and part-cure it at 60 °C; place the sugar inserts and pour the Ecoflex 00-30 layer; then pour the Dragon Skin 30 top layer and cure for 10 hours.
+3. **Open the chambers:** inject water with a syringe to dissolve the sugar, then draw the solution out, leaving clean, precisely shaped hollow chambers.
+4. **Assembly:** add small inlet ports and connect a hand pump through a bidirectional valve to inflate and deflate the separator.
+
+## Testing and Results
+
+- **Inflation tests:** the chambers survived **repeated inflation and deflation cycles at high pressure** with no material failure or leaks.
+- **Functional tests:** worn on the foot, the inflated separator **moved the big toe outward into alignment**, and support was tested in simulated walking.
+- The results confirmed our hypothesis: sugar inserts are a **fast, simple way to make well-formed, durable air chambers** for soft medical devices.
+
+<div style="max-width: 560px; margin: 1.5rem auto 0;">
+  {% include figure.liquid loading="lazy" path="assets/img/projects/toe-separator-award.jpg" title="Best Design Process Award" class="img-fluid rounded z-depth-1" %}
+  <div class="caption">Best Design Process Award, BIOE 498/598 Soft Robotics.</div>
+</div>
+
+## Next Steps
+
+Add **pressure and force sensing** with a **microcontroller-regulated mini pump**, so the separator automatically holds the inflation level a clinician prescribes or adjusts for comfort.
+
+## Technical Stack
+
+- **Soft robotics:** PneuNet actuator design, multi-material silicone casting (Dragon Skin 30, Ecoflex 00-30)
+- **Fabrication:** 3D-printed moulds, dissolvable sugar inserts, staged oven curing
+- **Pneumatics:** Hand pump, bidirectional valve, inflation testing
